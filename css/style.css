@@ -1,0 +1,358 @@
+
+body {
+  width: 100vw;
+  font-family: 'Rubik', sans-serif;
+  color: rgba(104,64,102, 1);
+  background-color: white;
+}
+
+.about_body, .menu_body{
+  background-image: url("../images/wall_2.jpg");
+  background-position: center;
+  backdrop-filter: blur(3.5px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header { 
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: rgba(104,64,102, 0.50);
+  background-color: white;
+}
+
+header > a > img {
+  max-width: 75vw;
+}
+
+.skip {
+  visibility: hidden;
+}
+
+main {
+  overflow: hidden;
+}
+
+footer {
+  margin-top: -5px;
+  background-color: rgba(104,64,102, 1);
+  color: white;
+  width: 100vw;
+  height: 50px;
+  bottom: 0px;
+  left: 0;
+  text-align: center;
+}
+
+footer p {
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+/* Menu appear & disappear */
+.oldclass {
+  display: none;
+}
+
+.newclass { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 10;
+ }
+
+.newclass .nav_links a {
+  text-align: center;
+  display: block;
+  font-size: 25px;
+  color: rgba(104,64,102, 0.9);
+  font-weight: bold;
+  padding: 32px;
+  text-decoration: none;
+  transition: color 0.5xs;
+  transition: background-color 0.5s;
+}
+
+#current {
+  text-decoration: underline;
+}
+
+/* Menu icon and functionality */
+.menu_icon {
+  display: inline-block;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(104,64,102);
+  margin-bottom: 6px;
+  transition: 0.4s; 
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* First section of homepage */
+.main-image > img {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(70%);
+}
+
+.main-order > a {
+  position: absolute;
+  top: 275px;
+  font-size: 20px;
+  font-weight: 900;
+  right: 0px;
+  color: rgba(104,64,102, 1);
+  background-color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  padding: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background-color 0.75s;
+  transition: color 0.75s;
+  z-index: 1;
+}
+
+.main-order > a:hover {
+  color: white;
+  background-color: rgba(104,64,102, 1);
+}
+
+/* Second part of homepage */
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(104,64,102, 1);
+  text-align: center;
+  padding: 20px;
+}
+
+#skip {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  align-self: center;
+}
+
+.description > p {
+  font-size: 15px;
+  padding-right: 20px;
+  font-style: italic;
+  height: min-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.description > a {
+  width: 100px;
+  color:rgba(104,64,102, 1);
+  border: 1.5px solid rgba(104,64,102, 1);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.75s;
+  transition: color 0.75s;
+  padding: 15px;
+}
+
+.description > a:hover {
+  color: white;
+  background-color: rgba(104,64,102, 1);
+}
+
+/* Third part of homepage */
+.menu-image > img {
+  margin-top: 5px;
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(70%);
+}
+
+.menu-button > a {
+  position: absolute;
+  top: 915px;
+  left: 0px;
+  width: 30vw;
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(104,64,102, 1);
+  background-color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px;
+  padding-left: 30px;
+  transition: background-color 0.75s;
+  transition: color 0.75s;
+}
+
+.menu-button > a:hover {
+  color: white;
+  background-color: rgba(104,64,102, 1);
+}
+
+/* Fourth part of homepage */
+.hours {
+  margin-top: -5px;
+  background-color: white;
+  color: rgba(104,64,102, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5px;
+  text-align: center;
+  padding: 20px;
+}
+
+#hours {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  align-self: center;
+}
+
+.hours > p {
+  font-size: 15px;
+  padding-right: 20px;
+  height: min-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hours > a {
+  color:rgba(104,64,102, 1);
+}
+
+/* Fifth part of homepage */
+.contact-image > img {
+  margin-top: 5px;
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(80%);
+}
+
+.contact-button > a {
+  position: absolute;
+  top: 1525px;
+  right: 0px;
+  width: 30vw;
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(104,64,102, 1);
+  background-color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px;
+  padding-left: 30px;
+  transition: background-color 0.75s;
+  transition: color 0.75s;
+}
+
+.contact-button > a:hover {
+  color: white;
+  background-color: rgba(104,64,102, 1);
+}
+
+@media screen and (min-width: 760px) {
+
+  .skip {
+    visibility: visible;
+    left: 15px;
+    color: rgb(104,64,102);
+    background-color: white;
+    padding: 6px;
+    z-index: 1;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    position: absolute;
+    top: -30px;
+  }
+
+  .skip:focus {
+    visibility: visible;
+    position: absolute;
+    top: 0px;
+  }
+  .main-order > a, .menu-button > a, .contact-button > a {
+    font-size: 30px;
+    width: 50vw;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+  }
+
+  #skip, #hours {
+    font-size: 50px;
+  }
+
+  .description > a {
+    font-size: 25px;
+    width: 20vw;
+  }
+
+  .description > p {
+    width: 70vw;
+    padding: 20px;
+  }
+
+  .description > p, .hours > p, .hours > h2, .hours > a {
+    font-size: 20px;
+  }
+
+  .hours > p {
+    padding: 20px;
+  }
+
+  .main-order > a {
+    top: 300px;
+  }
+
+  .menu-button > a {
+    top: 915px;
+  }
+
+  .contact-button > a {
+    top: 1600px;
+  }
+
+  footer p {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+}
